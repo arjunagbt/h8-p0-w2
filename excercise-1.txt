@@ -1,0 +1,92 @@
+1.) Newton Second Law
+
+Algoritma:
+1. Simpan variabel 'm' dengan nilai massa sebesar 600 kg
+2. Simpan variabel 'a' dengan nilai percepatan sebesar 2 m/s^2 
+3. Simpan variabel 'F' dengan nilai kosong
+4. Kalkulasikan nilai F dengan mengalikan variabel m dengan variabel a.
+5. Tampilkan nilai F
+
+Pseudocode:
+
+STORE 'm' with 600
+STORE 'a' with 2
+STORE 'F' with null
+CALCULATE 'm' times 'a'
+SET 'F' value with calculation result
+DISPLAY 'F'
+
+2.) Tahun Kabisat
+
+Algoritma
+1. Simpan variabel 'tahun' dengan nilai berapapun
+2. Bagi nilai variabel 'tahun' dengan 4, Jika habis, ke poin 3a, jika tidak habis, ke poin 3b
+3a. Bagi nilai variabel 'tahun' dengan 100, jika habis, ke poin 4a, jika tidak habis, ke poin 4b
+3b. Tampilkan "bukan tahun kabisat"
+4a. Bagi nilai variabel 'tahun' dengan 400, jika habis, ke poin 5a, jika tidak habis, ke poin 5b
+4b. Tampilkan "tahun kabisat"
+5a. Tampilkan "tahun kabisat"
+5b. Tampilkan "bukan tahun kabisat"
+
+Pseudocode
+
+STORE 'tahun' with any number
+CALCULATE tahun mod 4
+IF tahun mod 4 == 0
+    DO CALCULATE tahun mod 100
+        IF tahun mod 100 == 0
+            DO CALCULATE tahun mod 400
+                IF tahun mod 400 == 0
+                DISPLAY "Tahun kabisat"
+                ELSE DISPLAY "Bukan tahun kabisat"
+                ENDIF
+        ELSE DISPLAY "Tahun kabisat"
+        ENDIF
+ELSE DISPLAY "Bukan tahun kabisat."
+ENDIF
+
+3.)Laundry Day
+
+Algoritma
+1. Simpan variabel 'cucian' dengan angka 0
+2. Tambahkan nilai 1 ke variabel 'cucian'
+3. Selama nilai variabel 'cucian' masih dibawah 20, ulangi langkah 2, ketika nilai variabel cucian sama dengan 20
+    lanjut ke langkah 4
+4. tampilkan "semua pakaian sudah dimasukkan ke mesin cuci"
+
+Pseudocode
+
+STORE 'cucian' with 0
+WHILE 'cucian <=20
+    DO CALCULATE cucian = cucian + 1
+    DISPLAY "Cucian yang ada di dalam mesin =" 'cucian'
+ENDWHILE
+    DISPLAY "Seluruh cucian sudah masuk mesin cuci"
+
+4.)Periksa Kuku
+
+Algoritma
+1. Simpan nilai 'murid' dengan angka 0
+2. Simpan nilai 'kuku panjang' dengan nilai awal boolean true
+3. Ketika nilai 'murid' lebih kecil dari 40, ke poin 4, bila nilai murid sama dengan 40, ke poin 5
+4a. tambahkan nilai 'murid' dengan angka 1
+4b. minta input nilai 'kuku panjang', apabila true, ke poin 4c, apabila false, ke poin 4d.
+4c. tampilkan "murid harus dihukum"
+4d. tampilkan "murid harus dipuji"
+5. tampilkan "pemeriksaan telah selesai"
+
+Pseudocode
+
+STORE 'murid' with 0
+STORE 'kuku panjang' with true
+WHILE 'murid' <= 40
+    DO CALCULATE murid = murid + 1
+    SET 'kuku panjang' with any boolean
+    IF 'kuku panjang' = true
+        DO DISPLAY "murid harus dihukum"
+        ELSE
+        DO DISPLAY "murid harus dipuji"
+    ENDIF
+ENDWHILE
+DISPLAY "pemeriksaan telah selesai"
+
