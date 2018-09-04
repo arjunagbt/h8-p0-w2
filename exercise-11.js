@@ -1,10 +1,9 @@
 function balikKata(kata) {
    var str = "" //string kosong untuk menampung
-   var counter = kata.length // counter untuk while
+   
 
-   while (counter > 0){
+   for (counter=kata.length;counter > 0; counter --){
        str += kata[counter - 1] // menambahkan string  dari index, dihitung mundur dari belakang sesuai counter
-       counter -- //decrement
      }
     return str
    }

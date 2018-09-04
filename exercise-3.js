@@ -1,34 +1,45 @@
-var nama = ''
-var peran = ''
+//Contoh input
+var nama = 'Tom';
+var peran = 'KSATRIA';
 
-//apabila variabel nama dan peran kosong, atau nama kosong namun variabel peran memiliki nilai string
-if (nama === '' && peran === '' || nama ==='' && peran !=='') {
-    console.log('Nama harus diisi!')
-} 
-//apabila nama sudah diisi namun variabel peran masih memiliki string kosong
-else if (nama !== '' && peran === '') {
-    console.log(`Halo, ${nama} ! Pilih peranmu untuk memulai game! (Ksatria, Penyihir, atau Tabib)`)
-} 
-//apabila nama sudah diisi dan memilih peran ksatria
-else if (nama !== '' && peran === 'Ksatria'){
-    console.log(`Selamat datang di Dunia Proxytia, ${nama}!`)
-    console.log(`Halo ${peran} ${nama}, kamu dapat menyerang dengan senjatamu!`)
-} 
-//apabila nama sudah diisi dan memilih peran tabib
-else if (nama !== '' && peran === 'Tabib'){
-    console.log(`Selamat datang di Dunia Proxytia, ${nama}!`)
-    console.log(`Halo ${peran} ${nama}, kamu akan membantu temanmu yang terluka.`)
-}
-//apabila nama sudah diisi dan memilih peran penyihir
-else if (nama !== '' && peran === 'Penyihir'){
-    console.log(`Selamat datang di Dunia Proxytia, ${nama}!`)
-    console.log(`Halo ${peran} ${nama},  ciptakan keajaiban yang membantu kemenanganmu!`)
-} 
-//apabila nama sudah diisi namun peran tidak termasuk dalam pilihan peran yang tersedia
-else {
-    console.log('Pilihan peran tidak tersedia! pilih Ksatria, Penyihir, atau Tabib!')
+
+if (nama){
+    if (peran){
+        if(peran.toLowerCase() === 'ksatria'){
+            console.log(`Selamat datang di Dunia Proxytia ${nama}`)
+            console.log(`Halo ${peran} ${nama}, kamu dapat menyerang dengan senjatamu!`)
+        } else if (peran.toLowerCase() === 'tabib'){
+            console.log(`Selamat datang di Dunia Proxytia ${nama}`)
+            console.log(`Halo ${peran} ${nama}, kamu akan membantu temanmu yang terluka.`)
+        } else if (peran.toLowerCase() === 'penyihir'){
+            console.log(`Selamat datang di Dunia Proxytia ${nama}`)
+            console.log(`Halo ${peran} ${nama}, ciptakan keajaiban yang membantu kemenanganmu!`)
+        } else {
+            console.log('Peran tidak tersedia!')
+        }
+    } else {
+        console.log(`Halo ${nama}, Pilih peranmu untuk memulai game!`)
+    }
+
+} else {
+    console.log("Nama harus diisi!")
 }
 
 
-//variabel peran case sensitive
-//Arjuna Sarumpaet 27 Aug 2018 (tested on repl.it)
+// Output untuk Input nama = '' dan peran = ''
+"Nama harus diisi!"
+
+//Output untuk Input nama = 'Mikael' dan peran = ''
+"Halo Mikael, Pilih peranmu untuk memulai game!"
+
+//Output untuk Input nama = 'Nina' dan peran 'Ksatria'
+"Selamat datang di Dunia Proxytia, Nina"
+"Halo Ksatria Nina, kamu dapat menyerang dengan senjatamu!"
+
+//Output untuk Input nama = 'Danu' dan peran 'Tabib'
+"Selamat datang di Dunia Proxytia, Danu"
+"Halo Tabib Danu, kamu akan membantu temanmu yang terluka."
+
+//Output untuk Input nama = 'Zero' dan peran 'Penyihir'
+"Selamat datang di Dunia Proxytia, Zero"
+"Halo Penyihir Zero, ciptakan keajaiban yang membantu kemenanganmu!"
